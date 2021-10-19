@@ -7,6 +7,19 @@ class ValuesService {
   console.log(ProxyState.money)
   
  }
+ purchase(name){
+   
+   let found = ProxyState.snacks.find(s => s.name === name)
+    if(found.price <= ProxyState.money){
+     ProxyState.money -= found.price
+      ProxyState.money = ProxyState.money
+    }else{
+      
+      return alert('no monnies')
+   
+    }
+
+ }
  
 }
 //  addValue() {

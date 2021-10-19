@@ -19,8 +19,8 @@ import { valuesService } from "../Services/ValuesService.js";
 
 //Public
 function _draw(){
-  let money = document.getElementById('billfold')
-    money.innerText = `you haven $${ProxyState.money.toString()} for snacks`
+  document.getElementById('billfold').innerText = `you have $${ProxyState.money.toString()} for snacks`
+    
   
   }
 export class ValuesController {
@@ -33,6 +33,9 @@ export class ValuesController {
     getMoney(){
      
       valuesService.getMoney()
+    }
+    purchase(name){
+      valuesService.purchase(name)
     }
     // ProxyState.on("values", _draw);
     // _draw()
